@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .product-item {
+    @apply flex-1;
+    min-width: calc(25% - 1rem); /* Adjust 1rem according to the gap used */
+  }
+
+  @screen sm {
+    .product-item {
+      min-width: calc(50% - 1rem);
+    }
+  }
+
+  @screen md {
+    .product-item {
+      min-width: calc(33.33% - 1rem);
+    }
+  }
+
+  @screen lg {
+    .product-item {
+      min-width: calc(25% - 1rem);
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper div styling */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+/* Custom checkbox style */
+.checkbox-container input[type="checkbox"] {
+  appearance: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #eee;
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+/* Change color when checked */
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #3b82f6;
+}
+/* Checkmark/indicator */
+.checkbox-container input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+}
+/* Label styling */
+.checkbox-container label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+/* Wrapper div styling */
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+/* Custom radio button style */
+.radio-container input[type="radio"] {
+  appearance: none;
+  height: 1.25rem; /* 20px */
+  width: 1.25rem; /* 20px */
+  background-color: #eee;
+  border-radius: 50%; /* Make it a circle */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+/* Change color when checked */
+.radio-container input[type="radio"]:checked {
+  background-color: #3b82f6;
+}
+/* Inner circle (dot) for checked radio button */
+.radio-container input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.375rem;
+  left: 0.375rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+}
+/* Label styling */
+.radio-container label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #4a5568;
+}
