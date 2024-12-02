@@ -4,31 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .product-item {
-    @apply flex-1;
-    min-width: calc(25% - 1rem); /* Adjust 1rem according to the gap used */
-  }
-
-  @screen sm {
-    .product-item {
-      min-width: calc(50% - 1rem);
-    }
-  }
-
-  @screen md {
-    .product-item {
-      min-width: calc(33.33% - 1rem);
-    }
-  }
-
-  @screen lg {
-    .product-item {
-      min-width: calc(25% - 1rem);
-    }
-  }
-}
-
 body {
   margin: 0;
   padding: 0;

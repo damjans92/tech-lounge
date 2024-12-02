@@ -34,7 +34,7 @@ function ProductItem({ product }: ProductItemProps) {
         <span className="text-[1.25rem] text-gray-800 font-light text-center text-md min-h-[50px] leading-6">
           {product.name}
         </span>
-        <div className="flex justify-between w-full p-3">
+        <div className="flex justify-between w-full p-3 flex-wrap">
           <div className="text-[1.5rem] text-stone-500 ">${product.price}</div>
           <button
             className="bg-blue-500 rounded-full p-2 text-white px-4"

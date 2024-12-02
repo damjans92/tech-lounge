@@ -58,7 +58,7 @@ function Shop() {
         <div className="uppercase text-6xl font-thin">Shop</div>
       </div>
       <div className="pt-16">
-        <div className="max-w-[1536px] mx-auto px-4">
+        <div className="container mx-auto px-4">
           <main className="flex flex-col md:flex-row gap-3">
             <aside className="sm:w-1/5">
               <CategoryFilter
