@@ -18,9 +18,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white-200 p-4">
+    <nav className="bg-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="uppercase text-3xl">
+        <Link to="/" className="uppercase text-lg sm:text-3xl">
           <span className="font-bold">Tech</span>
           <span className="tracking-widest font-thin">Lounge</span>
         </Link>

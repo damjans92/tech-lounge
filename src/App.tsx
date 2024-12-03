@@ -18,7 +18,11 @@ const AppContent: React.FC = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<AnimatedElement element={<Shop />} />} />
+        <Route
+          path="/product/:productId"
+          element={<AnimatedElement element={<Shop />} />}
+        />
+        <Route path="/" element={<AnimatedElement element={<Product />} />} />
         <Route
           path="/about"
           element={<AnimatedElement element={<About />} />}

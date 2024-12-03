@@ -25,7 +25,7 @@ export const PriceRangeFilter = ({
   };
 
   return (
-    <div className="p-3 border border-stone-200 rounded-md flex flex-col mt-3">
+    <div className="p-3 border bg-white border-stone-200 rounded-md flex flex-col mt-3">
       <span className="font-bold text-lg uppercase 2-full border-b-2 border-black mb-3">
         Price
       </span>

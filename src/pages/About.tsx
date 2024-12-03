@@ -19,24 +19,31 @@ function About() {
                 <h2 className="text-4xl font-light mb-8">
                   <i> Elevate Your Tech Experience.</i>
                 </h2>
-
                 <p className="mb-6">
                   TechLounge is your ultimate destination for cutting-edge
                   technology. We're passionate about bringing you the latest
                   gadgets and accessories to enhance your digital lifestyle.
                 </p>
-
-                <strong className="mb-6">Why Choose TechLounge?</strong>
-
+                <h3 className="mb-6 ">Why Choose TechLounge?</h3>
                 <p className="mb-6">
-                  A Curated Selection: We handpick the finest tech products from
-                  renowned brands. Expert Guidance: Our knowledgeable team is
-                  here to help you make informed decisions. Hassle-Free
-                  Shopping: Enjoy a seamless online shopping experience.
+                  <ul>
+                    <li>
+                      A Curated Selection: We handpick the finest tech products
+                      from renowned brands.
+                    </li>
+                    <li>
+                      Expert Guidance: Our knowledgeable team is here to help
+                      you make informed decisions.
+                    </li>
+                    <li>
+                      Hassle-Free Shopping: Enjoy a seamless online shopping
+                      experience.
+                    </li>
+                  </ul>
+                  <br />
                 </p>
-
+                <h3> Explore Our Range:</h3>
                 <p className="mb-6">
-                  <strong> Explore Our Range:</strong>
                   <br /> Smartphones: Powerful devices that fit your lifestyle.
                   <br />
                   Tablets: Versatile companions for work and play.

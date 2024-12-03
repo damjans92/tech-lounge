@@ -10,6 +10,10 @@ export const filterByCategory = (
   );
 };
 
+export const filterByBrands = (product: Product, selectedBrands: string[]) => {
+  return selectedBrands.length === 0 || selectedBrands.includes(product.brand);
+};
+
 export const filterByPriceRange = (
   product: Product,
   selectedPrices: string[]

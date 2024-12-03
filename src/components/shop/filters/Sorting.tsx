@@ -7,12 +7,12 @@ type SortingProps = {
 
 export const Sorting = ({ sortOption, onSortChange }: SortingProps) => {
   return (
-    <div className="flex justify-end items-center">
+    <div className="flex justify-end items-center ml-auto">
       <span className="mb-3 mr-3 text-lg">Sort by:</span>
       <select
         name="sort-select"
         id="sort-select"
-        className="w-[200px] mb-3 h-10 px-3 rounded-md text-lg bg-neutral-100 border border-stone-400"
+        className="w-auto mb-3 h-10 px-3 rounded-md text-lg bg-neutral-100 border border-stone-400"
         value={sortOption}
         onChange={onSortChange}
       >

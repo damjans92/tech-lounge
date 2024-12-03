@@ -22,7 +22,7 @@ export const Cart = ({ cartItems }: { cartItems: CartItem[] }) => {
 
   return (
     <div
-      className={`flex flex-col w-[430px] z-10 bg-white border border-stone-200 absolute top-12 right-0 rounded-md p-6 pr-6 transition-all duration-300 ${
+      className={`flex flex-col w-[430px] max-[500px]:w-[330px] z-10 bg-white border border-stone-200 absolute top-12 right-0 rounded-md p-6 pr-6 transition-all duration-300 ${
         state.isOpen
           ? "opacity-100 translate-y-0 visible"
           : "opacity-0 translate-y-[50px] invisible"

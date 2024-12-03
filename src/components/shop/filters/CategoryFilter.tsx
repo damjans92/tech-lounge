@@ -21,7 +21,7 @@ export const CategoryFilter = ({
   };
 
   return (
-    <div className="p-3 border border-stone-200 rounded-md flex flex-col">
+    <div className="p-3 border bg-white border-stone-200 rounded-md flex flex-col">
       <span className="font-bold text-lg uppercase 2-full border-b-2 border-black">
         Categories
       </span>
