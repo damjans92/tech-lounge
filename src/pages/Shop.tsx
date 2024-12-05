@@ -56,13 +56,14 @@ function Shop() {
     }
   });
 
-  const indexOfLastProduct = currentPage * 12;
-  const indexOfFirstProduct = indexOfLastProduct - 12;
+  const PRODUCTS_PER_PAGE = 12;
+  const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
+  const indexOfFirstProduct = indexOfLastProduct - PRODUCTS_PER_PAGE;
   const currentProducts = sortedProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
-  const totalPages = Math.ceil(sortedProducts.length / 12);
+  const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
   const handlePageChange = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const toggleFilters = () => {
@@ -75,7 +76,7 @@ function Shop() {
         <div className="uppercase text-6xl font-thin">Shop</div>
       </div>
       <div className="pt-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-20">
           <main className="flex flex-col md:flex-row gap-3">
             <aside
               className={` ${
@@ -120,6 +121,7 @@ function Shop() {
                 <Sorting
                   sortOption={sortOption}
                   onSortChange={handleSortChange}
+                  totalProductsNum={sortedProducts.length}
                 />
               </div>
 

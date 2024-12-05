@@ -27,6 +27,9 @@ export type Product = {
   category: string;
   image: string;
   brand: string;
+  description: string;
+  productCode: string;
+  stockQuantity: number;
 };
 
 export type ProductState = {

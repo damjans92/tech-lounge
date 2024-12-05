@@ -1,5 +1,6 @@
 import useCart from "../../hooks/useCart";
 import { CartItem } from "../../types";
+import { getThumbnailImage } from "../../utils/getThumbnailImage";
 
 export const Cart = ({ cartItems }: { cartItems: CartItem[] }) => {
   const { state, dispatch } = useCart();
@@ -40,7 +41,10 @@ export const Cart = ({ cartItems }: { cartItems: CartItem[] }) => {
           className="relative flex items-center border-b border-stone-200 pt-5"
         >
           <div className="w-[100px]">
-            <img src={item.image} alt="" />
+            <img
+              src={`/images/thumbs/${getThumbnailImage(item.image)}`}
+              alt=""
+            />
           </div>
           <div className="w-[200px]">{item.name}</div>
           <div className="flex w-[50px]">

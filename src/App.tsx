@@ -12,17 +12,18 @@ import { ProductProvider } from "./context/productsContext";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import AnimatedElement from "./components/AnimatedElement";
+import { ProductDetails } from "./pages/ProductDetails";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<AnimatedElement element={<Shop />} />} />
         <Route
           path="/product/:productId"
-          element={<AnimatedElement element={<Shop />} />}
+          element={<AnimatedElement element={<ProductDetails />} />}
         />
-        <Route path="/" element={<AnimatedElement element={<Product />} />} />
         <Route
           path="/about"
           element={<AnimatedElement element={<About />} />}
