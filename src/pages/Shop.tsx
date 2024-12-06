@@ -14,6 +14,7 @@ import useScreenWidth from "../hooks/useScreenWidth.ts";
 import { FaFilter } from "react-icons/fa6";
 import { MdClose } from "react-icons/md";
 import { BrandFilter } from "../components/shop/filters/BrandFilter.tsx";
+import { Product } from "../types.ts";
 
 function Shop() {
   const { products } = useProducts();
@@ -55,6 +56,13 @@ function Shop() {
         return 0;
     }
   });
+
+  const productsPerFilter = (filter: keyof Product, value: string) => {
+    const allProductsWithFilter = products.filter(
+      (product) => product[filter] === value
+    );
+    return allProductsWithFilter.length;
+  };
 
   const PRODUCTS_PER_PAGE = 12;
   const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
@@ -100,10 +108,12 @@ function Shop() {
               <CategoryFilter
                 categories={categories}
                 setSelectedCategories={setSelectedCategories}
+                productsPerFilter={productsPerFilter}
               />
               <BrandFilter
                 brands={brands}
                 setSelectedBrands={setSelectedBrands}
+                productsPerFilter={productsPerFilter}
               />
               <PriceRangeFilter setSelectedPrices={setSelectedPrices} />
             </aside>

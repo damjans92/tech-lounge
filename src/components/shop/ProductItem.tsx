@@ -29,7 +29,7 @@ function ProductItem({ product }: ProductItemProps) {
           <img
             src={`/images/thumbs/${getThumbnailImage(product.image)}`}
             alt={product.name}
-            className="transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105"
+            className="transform transition-transform duration-300  group-hover:scale-105"
             loading="lazy"
           />
         </div>

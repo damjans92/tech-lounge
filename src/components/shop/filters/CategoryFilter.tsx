@@ -1,13 +1,16 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { Product } from "../../../types";
 
 type CategoryFilterProps = {
   categories: string[];
   setSelectedCategories: Dispatch<SetStateAction<string[]>>;
+  productsPerFilter: (filter: keyof Product, value: string) => number;
 };
 
 export const CategoryFilter = ({
   categories,
   setSelectedCategories,
+  productsPerFilter,
 }: CategoryFilterProps) => {
   const handleChangeCategory = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedCat = e.target.value;
@@ -30,7 +33,7 @@ export const CategoryFilter = ({
           <div key={category} className="checkbox-container">
             <label
               htmlFor={category}
-              className="cursor-pointer flex items-center"
+              className="cursor-pointer flex items-center w-full"
             >
               <input
                 type="checkbox"
@@ -40,6 +43,9 @@ export const CategoryFilter = ({
                 onChange={handleChangeCategory}
               />
               <span>{category}</span>
+              <span className="ml-auto text-neutral-400">
+                ({productsPerFilter("category", category)})
+              </span>
             </label>
           </div>
         ))}

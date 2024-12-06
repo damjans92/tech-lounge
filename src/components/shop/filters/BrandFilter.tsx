@@ -1,13 +1,16 @@
 import React, { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { Product } from "../../../types";
 
 type BrandFilterProps = {
   brands: string[];
   setSelectedBrands: Dispatch<SetStateAction<string[]>>;
+  productsPerFilter: (filter: keyof Product, value: string) => number;
 };
 
 export const BrandFilter = ({
   brands,
   setSelectedBrands,
+  productsPerFilter,
 }: BrandFilterProps) => {
   const handleChangeBrand = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedBrand = e.target.value;
@@ -27,7 +30,10 @@ export const BrandFilter = ({
       <div className="flex flex-col gap-2 mt-3 text-lg font-light">
         {brands.map((brand) => (
           <div key={brand} className="checkbox-container">
-            <label htmlFor={brand} className="cursor-pointer flex items-center">
+            <label
+              htmlFor={brand}
+              className="cursor-pointer flex items-center  w-full"
+            >
               <input
                 type="checkbox"
                 className="mr-3 "
@@ -36,6 +42,9 @@ export const BrandFilter = ({
                 onChange={handleChangeBrand}
               />
               <span>{brand}</span>
+              <span className="ml-auto text-neutral-400">
+                ({productsPerFilter("brand", brand)})
+              </span>
             </label>
           </div>
         ))}

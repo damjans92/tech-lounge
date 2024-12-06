@@ -3,8 +3,9 @@ import { useLocation, useParams } from "react-router-dom";
 import { useProducts } from "../context/productsContext";
 import useCart from "../hooks/useCart";
 import { CartItem, Product } from "../types";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export const ProductDetails = () => {
+const ProductDetails = () => {
   const [product, setProduct] = useState<Product | undefined>(undefined);
   const { products } = useProducts();
   const { state, dispatch } = useCart();
@@ -65,7 +66,7 @@ export const ProductDetails = () => {
             </div>
             <div className="cursor-pointer max-w-[100px]">
               <img
-                src={"/images/laptop-3.jpg"}
+                src={"/images/headphones-3.jpg"}
                 alt=""
                 className="border border-neutral-300 rounded-xl hover:border-neutral-400"
                 onClick={handleImageClick}
@@ -73,14 +74,14 @@ export const ProductDetails = () => {
             </div>
           </div>
           <div className="lg:w-5/6  lg:order-2 order-1">
-            <img
-              className="border border-neutral-300 rounded-xl"
+            <LazyLoadImage
               src={selectedImageSrc}
               alt={product?.name}
+              effect="blur"
             />
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 md:w-1/2">
           <h1 className="mb-6 uppercase text-3xl sm:text-3xl md:text-4xl lg:text-5xl">
             {product?.name}
           </h1>
@@ -95,6 +96,19 @@ export const ProductDetails = () => {
           <div>
             <span>Brand:</span>
             <p className="text-2xl font-light">{product?.brand}</p>
+          </div>
+          <div>
+            {product?.stockQuantity > 0 ? (
+              <div className="text-lg">
+                <span className="w-3 h-3 bg-green-600 inline-block rounded-full mr-2"></span>
+                In stock
+              </div>
+            ) : (
+              <div className="text-lg">
+                <span className="w-3 h-3 bg-red-600 inline-block rounded-full mr-2"></span>
+                Out of stock
+              </div>
+            )}
           </div>
           <div>
             <p className="text-5xl font-light text-red-500">
@@ -112,3 +126,5 @@ export const ProductDetails = () => {
     </section>
   );
 };
+
+export default ProductDetails;

@@ -1,6 +1,7 @@
 import { Product } from "../types";
+import { shuffleArray } from "../utils/shuffleProducts";
 
-const products: Product[] = [
+const productsArray: Product[] = [
   {
     id: "1a2b3c4d-5678-90ab-cdef-1234567890ab",
     category: "Headphones",
@@ -46,7 +47,7 @@ const products: Product[] = [
     description:
       "Wireless headphones with active noise cancellation and great sound quality.",
     productCode: "SEN-HD450BT-004",
-    stockQuantity: 8,
+    stockQuantity: 4,
   },
   {
     id: "5e6f7g8h-9012-34ef-bcdf-567890abcdef",
@@ -188,7 +189,7 @@ const products: Product[] = [
     stockQuantity: 7,
   },
   {
-    id: "5e6f7g8h-9012-34ef-bcdf-567890abcdef",
+    id: "4e6f7g8h-9022-34ef-bcdf-567890abcdef",
     category: "Laptops",
     name: "Dell XPS 15",
     price: 1749,
@@ -200,7 +201,7 @@ const products: Product[] = [
     stockQuantity: 2,
   },
   {
-    id: "6f7g8h9i-0123-45fa-cdeb-67890abcdef0",
+    id: "4f7g8h9i-0123-45fa-cdeb-67890abcdef0",
     category: "Laptops",
     name: "Dell Inspiron 15",
     price: 899,
@@ -211,7 +212,7 @@ const products: Product[] = [
     stockQuantity: 9,
   },
   {
-    id: "7g8h9i0j-1234-56fb-deac-7890abcdef01",
+    id: "5gh8h9i0j-1234-56fb-deac-7890abcdef01",
     category: "Laptops",
     name: "HP Spectre x360 14",
     price: 1399,
@@ -223,7 +224,7 @@ const products: Product[] = [
     stockQuantity: 4,
   },
   {
-    id: "8h9i0j1k-2345-67gc-eabd-890abcdef012",
+    id: "3h9i0j1k-2345-67gc-eabd-890abcdef012",
     category: "Laptops",
     name: "HP Envy 13",
     price: 999,
@@ -234,7 +235,7 @@ const products: Product[] = [
     stockQuantity: 8,
   },
   {
-    id: "9i0j1k2l-3456-78hd-fabc-90abcdef0123",
+    id: "4i0j1k2l-3456-78hd-fabc-90abcdef0123",
     category: "Laptops",
     name: "HP Pavilion 15",
     price: 699,
@@ -256,7 +257,7 @@ const products: Product[] = [
     stockQuantity: 5,
   },
   {
-    id: "1k2l3m4n-5678-90jf-hbce-12abcdef0125",
+    id: "0k2l3m4n-5678-90jf-hbce-12abcdef0125",
     category: "Laptops",
     name: "Microsoft Surface Book 3",
     price: 2399,
@@ -267,7 +268,7 @@ const products: Product[] = [
     stockQuantity: 2,
   },
   {
-    id: "2l3m4n5o-6789-01kg-icdf-23abcdef0126",
+    id: "2l3m4n5o-6249-01kg-icdf-23abcdef0126",
     category: "Laptops",
     name: "Microsoft Surface Pro 8",
     price: 1599,
@@ -439,7 +440,7 @@ const products: Product[] = [
     stockQuantity: 6,
   },
   {
-    id: "1a2b3c4d-5678-90ab-cdef-1234567890ab",
+    id: "355b3c4d-5678-90ab-cdef-1234567890ab",
     category: "Tablets",
     name: "Apple iPad Pro 12.9 (2024)",
     price: 1199,
@@ -451,7 +452,7 @@ const products: Product[] = [
     stockQuantity: 5,
   },
   {
-    id: "2b3c4d5e-6789-01bc-defa-234567890abc",
+    id: "7b3c4d5e-6789-01bc-defa-234567890abc",
     category: "Tablets",
     name: "Apple iPad Air",
     price: 599,
@@ -463,7 +464,7 @@ const products: Product[] = [
     stockQuantity: 7,
   },
   {
-    id: "3c4d5e6f-7890-12cd-efab-34567890abcd",
+    id: "2frd5e6f-7890-12cd-efab-34567890abcd",
     category: "Tablets",
     name: "Apple iPad Mini",
     price: 499,
@@ -486,7 +487,7 @@ const products: Product[] = [
     stockQuantity: 4,
   },
   {
-    id: "5e6f7g8h-9012-34ef-bcdf-567890abcdef",
+    id: "3e6f7g8h-9012-34ef-bcdf-567890abcdef",
     category: "Tablets",
     name: "Samsung Galaxy Tab S8",
     price: 799,
@@ -510,7 +511,7 @@ const products: Product[] = [
     stockQuantity: 10,
   },
   {
-    id: "7g8h9i0j-1234-56fb-deac-7890abcdef01",
+    id: "3g8h9i0j-1234-56fb-deac-7890abcdef01",
     category: "Tablets",
     name: "Microsoft Surface Pro 9",
     price: 999,
@@ -522,7 +523,7 @@ const products: Product[] = [
     stockQuantity: 3,
   },
   {
-    id: "8h9i0j1k-2345-67gc-eabd-890abcdef012",
+    id: "4h9i0j1k-2345-67gc-eabd-890abcdef012",
     category: "Tablets",
     name: "Microsoft Surface Go 3",
     price: 499,
@@ -533,7 +534,7 @@ const products: Product[] = [
     stockQuantity: 7,
   },
   {
-    id: "9i0j1k2l-3456-78hd-fabc-90abcdef0123",
+    id: "1i0j1k2l-3456-78hd-fabc-90abcdef0123",
     category: "Tablets",
     name: "Microsoft Surface Pro X",
     price: 1299,
@@ -556,7 +557,7 @@ const products: Product[] = [
     stockQuantity: 6,
   },
   {
-    id: "1k2l3m4n-5678-90jf-hbce-12abcdef0125",
+    id: "5k2l3m4n-5678-90jf-hbce-12abcdef0125",
     category: "Tablets",
     name: "Samsung Galaxy Tab S7",
     price: 649,
@@ -568,5 +569,7 @@ const products: Product[] = [
     stockQuantity: 4,
   },
 ];
+
+const products = shuffleArray(productsArray);
 
 export default products;

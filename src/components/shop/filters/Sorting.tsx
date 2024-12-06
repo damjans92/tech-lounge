@@ -14,7 +14,8 @@ export const Sorting = ({
   return (
     <div className="flex justify-between items-center w-full">
       <div className="text-lg font-thin items-center ">
-        Showing <strong>{totalProductsNum}</strong> product in total
+        Showing <strong className="text-neutral-600">{totalProductsNum}</strong>{" "}
+        product in total
       </div>
       <div>
         <span className="mb-3 mr-3 text-lg">Sort by:</span>

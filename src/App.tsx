@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,13 +5,15 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import AnimatedElement from "./components/AnimatedElement";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
+import About from "./pages/About";
+import ProductDetails from "./pages/ProductDetails";
+import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/cartContext";
 import { ProductProvider } from "./context/productsContext";
-import About from "./pages/About";
-import Footer from "./components/Footer";
-import AnimatedElement from "./components/AnimatedElement";
-import { ProductDetails } from "./pages/ProductDetails";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const AppContent: React.FC = () => {
           path="/about"
           element={<AnimatedElement element={<About />} />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );

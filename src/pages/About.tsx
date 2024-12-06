@@ -1,3 +1,5 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function About() {
   return (
     <>
@@ -9,14 +11,15 @@ function About() {
           <main className="flex flex-col md:flex-row gap-6">
             <section className="flex flex-col lg:flex-row gap-6 py-20">
               <div className="lg:w-1/2">
-                <img
+                <LazyLoadImage
                   src="/images/about-img.jpg"
-                  alt="About Us image"
-                  className="rounded-md"
+                  height="auto"
+                  width="100%"
+                  alt="About Us"
                 />
               </div>
               <div className="lg:w-1/2 text-xl sm:text-2xl font-light">
-                <h2 className="text-3xl md:text-5xl font-thin mb-8">
+                <h2 className="text-3xl md:text-5xl font-thin mb-12">
                   <i> Elevate Your Tech Experience.</i>
                 </h2>
                 <p className="mb-6">
