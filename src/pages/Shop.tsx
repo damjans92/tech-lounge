@@ -25,7 +25,6 @@ function Shop() {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const screenWidth = useScreenWidth();
-  const [isMobile, setIsMobile] = useState(false);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   const categoriesSet = new Set(products.map((p) => p.category));

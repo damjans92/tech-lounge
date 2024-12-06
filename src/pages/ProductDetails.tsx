@@ -1,14 +1,14 @@
-import React, { MouseEvent, useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { MouseEvent, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useProducts } from "../context/productsContext";
 import useCart from "../hooks/useCart";
-import { CartItem, Product } from "../types";
+import { Product } from "../types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState<Product | undefined>(undefined);
   const { products } = useProducts();
-  const { state, dispatch } = useCart();
+  const { dispatch } = useCart();
   const params = useParams();
   const productId = params.productId;
 
@@ -16,13 +16,11 @@ const ProductDetails = () => {
     ""
   );
 
-  const location = useLocation();
-
   const addTocart = (product: Product) => {
     dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity: 1 } });
   };
 
-  const handleAddtoCart = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleAddtoCart = () => {
     if (product) addTocart(product);
   };
 
@@ -116,7 +114,7 @@ const ProductDetails = () => {
             </p>
           </div>
           <button
-            onClick={(e) => handleAddtoCart(e)}
+            onClick={handleAddtoCart}
             className="w-[200px] mt-6 bg-blue-500 hover:bg-blue-700 rounded-full p-5 text-xl text-white transition-colors duration-150"
           >
             Add to Cart

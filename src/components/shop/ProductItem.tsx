@@ -8,7 +8,7 @@ interface ProductItemProps {
 }
 
 function ProductItem({ product }: ProductItemProps) {
-  const { state, dispatch } = useCart();
+  const { dispatch } = useCart();
 
   const addToCart = (product: Product) => {
     dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity: 1 } });
