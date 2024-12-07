@@ -12,8 +12,8 @@ export const Sorting = ({
   totalProductsNum,
 }: SortingProps) => {
   return (
-    <div className="flex justify-between items-center w-full">
-      <div className="text-lg font-thin items-center ">
+    <div className="flex justify-between items-center w-full flex-col sm:flex-row">
+      <div className="text-lg font-thin items-center p-2">
         Showing <strong className="text-neutral-600">{totalProductsNum}</strong>{" "}
         product in total
       </div>

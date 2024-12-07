@@ -82,7 +82,7 @@ function Shop() {
       <div className="flex justify-center bg-neutral-100 py-12">
         <div className="uppercase text-6xl font-thin">Shop</div>
       </div>
-      <div className="pt-16">
+      <div className="sm:pt-16">
         <div className="container mx-auto px-4 py-20">
           <main className="flex flex-col md:flex-row gap-3">
             <aside
@@ -116,11 +116,11 @@ function Shop() {
               />
               <PriceRangeFilter setSelectedPrices={setSelectedPrices} />
             </aside>
-            <section className="w-full lg:w-4/5 flex flex-col">
-              <div className="flex">
+            <section className="w-full lg:w-4/5 flex flex-col ">
+              <div className="flex flex-col-reverse sm:flex-row ">
                 {screenWidth < 1024 && (
                   <button
-                    className="flex justify-center items-center mb-3 px-5  gap-3 bg-blue-500  text-lg text-white rounded-md"
+                    className="flex justify-center items-center mb-3 px-5 h-[50px] gap-3 bg-blue-500 hover:bg-blue-700 transition-colors  text-lg text-white rounded-md"
                     onClick={toggleFilters}
                   >
                     <span>Filters</span>

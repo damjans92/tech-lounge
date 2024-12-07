@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import AnimatedElement from "./components/AnimatedElement";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 import ProductDetails from "./pages/ProductDetails";
