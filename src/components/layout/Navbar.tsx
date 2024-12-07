@@ -32,7 +32,10 @@ function Navbar() {
   return (
     <nav className="bg-white p-4 ">
       <div className="container mx-auto flex justify-between items-center">
-        <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+        <button
+          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+          className="md:hidden"
+        >
           <RiMenu2Fill size={30} className="mr-2" />
         </button>
         <Link to="/" className="uppercase text-lg sm:text-3xl">
