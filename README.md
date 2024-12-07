@@ -1,27 +1,20 @@
 # TechLounge
 
-TechLounge is your ultimate destination for cutting-edge technology. We're passionate about bringing you the latest gadgets and accessories to enhance your digital lifestyle.
+TechLounge is a demo application showcasing the use of cart and product filtering functionalities with responsive design.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
-## Introduction
-
-Welcome to TechLounge! This application provides a seamless shopping experience for tech enthusiasts, featuring a curated selection of the latest gadgets and accessories.
-
 ## Features
 
-- **Curated Selection**: Handpicked tech products from renowned brands.
-- **Expert Guidance**: Assistance to help you make informed decisions.
-- **Hassle-Free Shopping**: Enjoy a seamless online shopping experience.
+- **Cart Functionalities**: Add, remove, and manage products in your cart with ease.
+- **AI-Generated Content**: AI was use to create visual appealing images for products.
 - **Product Categories**: Explore smartphones, tablets, headphones, and more.
 - **Responsive Design**: Accessible on all devices.
 
@@ -48,14 +41,14 @@ To run the application locally:
 
 1. **Start the development server**:
    ```bash
-   npm start
+   npm run dev
    ```
-2. Open your browser and navigate to `http://localhost:3000`
+2. Open your browser and navigate to `http://localhost:5173`
 
 ### Example Pages
 
 - **Home**: Introduction to TechLounge and featured products.
-- **Shop**: Browse and search for products by category.
+- **Shop**: Browse and search for products by category, brand and price filters.
 - **Product Details**: View detailed information about each product.
 - **About**: Learn more about TechLounge.
 
@@ -67,24 +60,10 @@ To run the application locally:
 - **CSS**: Styling for the application.
 - **react-lazy-load-image-component**: Lazy loading for images with blur effect.
 
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a Pull Request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
 If you have any questions or suggestions, feel free to reach out:
 
-- Email: your-email@example.com
-- GitHub: [yourusername](https://github.com/yourusername)
-- Website: [techlounge.com](https://www.techlounge.com)
+- Email: damjans92@gmail.com
+- GitHub: [damjans92](https://github.com/damjans92)
+- Website: [tech-lounge-nc3s.onrender.com](https://tech-lounge-nc3s.onrender.com/)

@@ -76,6 +76,7 @@ const ProductDetails = () => {
               src={selectedImageSrc}
               alt={product?.name}
               effect="blur"
+              className="rounded-xl border border-neutral-300"
             />
           </div>
         </div>
