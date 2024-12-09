@@ -1,6 +1,6 @@
 import { BsCart } from "react-icons/bs";
 import { Cart } from "../shop/Cart";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
@@ -44,20 +44,28 @@ function Navbar() {
         <div className="hidden md:flex w-full justify-center">
           <ul className="flex gap-3 uppercase text-xl font-light">
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="hover:text-blue-500 transition duration-200"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-500"
+                    : "text-black hover:text-blue-500 transition-all"
+                }
               >
                 Shop
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about"
-                className="hover:text-blue-500 transition duration-200"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-500"
+                    : "text-black hover:text-blue-500 transition-all"
+                }
               >
                 About
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -89,20 +97,20 @@ function Navbar() {
           } relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-light`}
         >
           <li className="underline">
-            <Link
+            <NavLink
               to="/"
               className="hover:text-blue-500 transition duration-200"
             >
               Shop
-            </Link>
+            </NavLink>
           </li>
           <li className="underline">
-            <Link
+            <NavLink
               to="/about"
               className="hover:text-blue-500 transition duration-200"
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <button
             onClick={() => setIsMobileNavOpen(false)}
