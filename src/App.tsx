@@ -14,6 +14,7 @@ import ProductDetails from "./pages/ProductDetails";
 import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/cartContext";
 import { ProductProvider } from "./context/productsContext";
+import Category from "./pages/Category";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -21,10 +22,14 @@ const AppContent: React.FC = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<AnimatedElement element={<Shop />} />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
         <Route
           path="/about"
           element={<AnimatedElement element={<About />} />}
+        />
+        <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route
+          path="/:category"
+          element={<AnimatedElement element={<Category />} />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
