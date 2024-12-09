@@ -4,7 +4,7 @@ import { shuffleArray } from "../utils/shuffleProducts";
 const productsArray: Product[] = [
   {
     id: "1a2b3c4d-5678-90ab-cdef-1234567890ab",
-    category: "Headphones",
+    category: "headphones",
     name: "Sony WH-1000XM5",
     price: 399,
     image: "headphones-1.jpg",
@@ -15,7 +15,7 @@ const productsArray: Product[] = [
   },
   {
     id: "2b3c4d5e-6789-01bc-defa-234567890abc",
-    category: "Headphones",
+    category: "headphones",
     name: "Bose QuietComfort 35 II",
     price: 299,
     image: "headphones-2.jpg",
@@ -27,7 +27,7 @@ const productsArray: Product[] = [
   },
   {
     id: "3c4d5e6f-7890-12cd-efab-34567890abcd",
-    category: "Headphones",
+    category: "headphones",
     name: "Beats Solo3 Wireless",
     price: 199,
     image: "headphones-3.jpg",
@@ -39,7 +39,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4d5e6f7g-8901-23de-fabc-4567890abcde",
-    category: "Headphones",
+    category: "headphones",
     name: "Sennheiser HD 450BT",
     price: 149,
     image: "headphones-4.jpg",
@@ -51,7 +51,7 @@ const productsArray: Product[] = [
   },
   {
     id: "5e6f7g8h-9012-34ef-bcdf-567890abcdef",
-    category: "Headphones",
+    category: "headphones",
     name: "Apple AirPods Max",
     price: 549,
     image: "headphones-5.jpg",
@@ -63,7 +63,7 @@ const productsArray: Product[] = [
   },
   {
     id: "6f7g8h9i-0123-45fa-cdeb-67890abcdef0",
-    category: "Headphones",
+    category: "headphones",
     name: "Jabra Elite 85h",
     price: 249,
     image: "headphones-6.jpg",
@@ -75,7 +75,7 @@ const productsArray: Product[] = [
   },
   {
     id: "7g8h9i0j-1234-56fb-deac-7890abcdef01",
-    category: "Headphones",
+    category: "headphones",
     name: "AKG N700NC M2",
     price: 299,
     image: "headphones-7.jpg",
@@ -86,8 +86,8 @@ const productsArray: Product[] = [
   },
   {
     id: "8h9i0j1k-2345-67gc-eabd-890abcdef012",
-    category: "Headphones",
-    name: "Bose Noise Cancelling Headphones 700",
+    category: "headphones",
+    name: "Bose Noise Cancelling headphones 700",
     price: 379,
     image: "headphones-8.jpg",
     brand: "Bose",
@@ -98,7 +98,7 @@ const productsArray: Product[] = [
   },
   {
     id: "9i0j1k2l-3456-78hd-fabc-90abcdef0123",
-    category: "Headphones",
+    category: "headphones",
     name: "Sennheiser Momentum 3 Wireless",
     price: 399,
     image: "headphones-9.jpg",
@@ -110,7 +110,7 @@ const productsArray: Product[] = [
   },
   {
     id: "0j1k2l3m-4567-89ie-gbad-01abcdef0124",
-    category: "Headphones",
+    category: "headphones",
     name: "Sony WH-XB900N",
     price: 249,
     image: "headphones-10.jpg",
@@ -122,7 +122,7 @@ const productsArray: Product[] = [
   },
   {
     id: "1k2l3m4n-5678-90jf-hbce-12abcdef0125",
-    category: "Headphones",
+    category: "headphones",
     name: "Beats Studio3 Wireless",
     price: 349,
     image: "headphones-11.jpg",
@@ -134,7 +134,7 @@ const productsArray: Product[] = [
   },
   {
     id: "2l3m4n5o-6789-01kg-icdf-23abcdef0126",
-    category: "Headphones",
+    category: "headphones",
     name: "Sony MDR-ZX110NC",
     price: 28,
     image: "headphones-12.jpg",
@@ -146,7 +146,7 @@ const productsArray: Product[] = [
   },
   {
     id: "1a2b3c4d-5678-55ab-cdef-1234567890ab",
-    category: "Laptops",
+    category: "laptops",
     name: "Apple MacBook Air M2",
     price: 1299,
     image: "laptop-1.jpg",
@@ -157,7 +157,7 @@ const productsArray: Product[] = [
   },
   {
     id: "2b3c4d5e-4859-01bc-defa-234567890abc",
-    category: "Laptops",
+    category: "laptops",
     name: "Apple MacBook Pro 16-inch M3",
     price: 2499,
     image: "laptop-2.jpg",
@@ -168,7 +168,7 @@ const productsArray: Product[] = [
   },
   {
     id: "7c4d5e6f-7890-12cd-efab-34567890abcd",
-    category: "Laptops",
+    category: "laptops",
     name: "Apple MacBook Pro 14-inch M3",
     price: 1999,
     image: "laptop-3.jpg",
@@ -179,7 +179,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4d5e6f7g-8901-25je-fabc-4567890abcde",
-    category: "Laptops",
+    category: "laptops",
     name: "Dell XPS 13",
     price: 1299,
     image: "laptop-4.jpg",
@@ -190,7 +190,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4e6f7g8h-9022-34ef-bcdf-567890abcdef",
-    category: "Laptops",
+    category: "laptops",
     name: "Dell XPS 15",
     price: 1749,
     image: "laptop-5.jpg",
@@ -202,7 +202,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4f7g8h9i-0123-45fa-cdeb-67890abcdef0",
-    category: "Laptops",
+    category: "laptops",
     name: "Dell Inspiron 15",
     price: 899,
     image: "laptop-6.jpg",
@@ -213,7 +213,7 @@ const productsArray: Product[] = [
   },
   {
     id: "5gh8h9i0j-1234-56fb-deac-7890abcdef01",
-    category: "Laptops",
+    category: "laptops",
     name: "HP Spectre x360 14",
     price: 1399,
     image: "laptop-7.jpg",
@@ -225,7 +225,7 @@ const productsArray: Product[] = [
   },
   {
     id: "3h9i0j1k-2345-67gc-eabd-890abcdef012",
-    category: "Laptops",
+    category: "laptops",
     name: "HP Envy 13",
     price: 999,
     image: "laptop-8.jpg",
@@ -236,7 +236,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4i0j1k2l-3456-78hd-fabc-90abcdef0123",
-    category: "Laptops",
+    category: "laptops",
     name: "HP Pavilion 15",
     price: 699,
     image: "laptop-9.jpg",
@@ -247,7 +247,7 @@ const productsArray: Product[] = [
   },
   {
     id: "0j1k2l3m-4567-29ie-gbad-01abcdef0124",
-    category: "Laptops",
+    category: "laptops",
     name: "Microsoft Surface Laptop 5",
     price: 1299,
     image: "laptop-10.jpg",
@@ -258,7 +258,7 @@ const productsArray: Product[] = [
   },
   {
     id: "0k2l3m4n-5678-90jf-hbce-12abcdef0125",
-    category: "Laptops",
+    category: "laptops",
     name: "Microsoft Surface Book 3",
     price: 2399,
     image: "laptop-11.jpg",
@@ -269,7 +269,7 @@ const productsArray: Product[] = [
   },
   {
     id: "2l3m4n5o-6249-01kg-icdf-23abcdef0126",
-    category: "Laptops",
+    category: "laptops",
     name: "Microsoft Surface Pro 8",
     price: 1599,
     image: "laptop-12.jpg",
@@ -280,7 +280,7 @@ const productsArray: Product[] = [
   },
   {
     id: "3m4n5o6p-7890-12lh-adec-34abcdef0127",
-    category: "Laptops",
+    category: "laptops",
     name: "Lenovo ThinkPad X1 Carbon",
     price: 1799,
     image: "laptop-13.jpg",
@@ -291,7 +291,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4n5o6p7q-8901-23mi-bdec-45abcdef0128",
-    category: "Laptops",
+    category: "laptops",
     name: "Lenovo Yoga 9i",
     price: 1199,
     image: "laptop-14.jpg",
@@ -303,7 +303,7 @@ const productsArray: Product[] = [
   },
   {
     id: "5o6p7q8r-9012-34nj-cdef-56abcdef0129",
-    category: "Laptops",
+    category: "laptops",
     name: "Lenovo Legion 5",
     price: 1099,
     image: "laptop-15.jpg",
@@ -314,7 +314,7 @@ const productsArray: Product[] = [
   },
   {
     id: "6p7q8r9s-0123-45ok-dfac-67abcdef0130",
-    category: "Laptops",
+    category: "laptops",
     name: "Lenovo IdeaPad 5",
     price: 699,
     image: "laptop-16.jpg",
@@ -325,7 +325,7 @@ const productsArray: Product[] = [
   },
   {
     id: "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Apple iPhone 15 Pro",
     price: 1199,
     image: "smartphone-1.jpg",
@@ -336,7 +336,7 @@ const productsArray: Product[] = [
   },
   {
     id: "b2c3d4e5-f678-90ab-cdef-234567890abc",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Apple iPhone SE (2024)",
     price: 499,
     image: "smartphone-2.jpg",
@@ -348,7 +348,7 @@ const productsArray: Product[] = [
   },
   {
     id: "c3d4e5f6-7890-12cd-efab-34567890abcd",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Samsung Galaxy S24 Ultra",
     price: 1199,
     image: "smartphone-3.jpg",
@@ -360,7 +360,7 @@ const productsArray: Product[] = [
   },
   {
     id: "d4e5f678-9012-34ef-bcdf-4567890abcde",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Samsung Galaxy S24",
     price: 999,
     image: "smartphone-4.jpg",
@@ -372,7 +372,7 @@ const productsArray: Product[] = [
   },
   {
     id: "e5f67890-1234-56fa-cdeb-567890abcdef",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Google Pixel 8 Pro",
     price: 999,
     image: "smartphone-5.jpg",
@@ -384,7 +384,7 @@ const productsArray: Product[] = [
   },
   {
     id: "f6789012-3456-78fb-dfac-67890abcdef0",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Google Pixel 7",
     price: 799,
     image: "smartphone-6.jpg",
@@ -395,7 +395,7 @@ const productsArray: Product[] = [
   },
   {
     id: "67890123-4567-89gc-ebac-7890abcdef01",
-    category: "Smartphones",
+    category: "smartphones",
     name: "OnePlus 12",
     price: 849,
     image: "smartphone-7.jpg",
@@ -406,7 +406,7 @@ const productsArray: Product[] = [
   },
   {
     id: "78901234-5678-90hd-fabc-890abcdef012",
-    category: "Smartphones",
+    category: "smartphones",
     name: "OnePlus 11T",
     price: 749,
     image: "smartphone-8.jpg",
@@ -417,7 +417,7 @@ const productsArray: Product[] = [
   },
   {
     id: "89012345-6789-01ie-gbad-90abcdef0123",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Apple iPhone 14",
     price: 999,
     image: "smartphone-9.jpg",
@@ -429,7 +429,7 @@ const productsArray: Product[] = [
   },
   {
     id: "90123456-7890-12jf-hbce-01abcdef0124",
-    category: "Smartphones",
+    category: "smartphones",
     name: "Samsung Galaxy S23",
     price: 899,
     image: "smartphone-10.jpg",
@@ -441,7 +441,7 @@ const productsArray: Product[] = [
   },
   {
     id: "355b3c4d-5678-90ab-cdef-1234567890ab",
-    category: "Tablets",
+    category: "tablets",
     name: "Apple iPad Pro 12.9 (2024)",
     price: 1199,
     image: "tablet-1.jpg",
@@ -453,7 +453,7 @@ const productsArray: Product[] = [
   },
   {
     id: "7b3c4d5e-6789-01bc-defa-234567890abc",
-    category: "Tablets",
+    category: "tablets",
     name: "Apple iPad Air",
     price: 599,
     image: "tablet-2.jpg",
@@ -465,7 +465,7 @@ const productsArray: Product[] = [
   },
   {
     id: "2frd5e6f-7890-12cd-efab-34567890abcd",
-    category: "Tablets",
+    category: "tablets",
     name: "Apple iPad Mini",
     price: 499,
     image: "tablet-3.jpg",
@@ -476,7 +476,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4d5e6f7g-2301-23de-fabc-4567890abcde",
-    category: "Tablets",
+    category: "tablets",
     name: "Samsung Galaxy Tab S9",
     price: 899,
     image: "tablet-4.jpg",
@@ -488,7 +488,7 @@ const productsArray: Product[] = [
   },
   {
     id: "3e6f7g8h-9012-34ef-bcdf-567890abcdef",
-    category: "Tablets",
+    category: "tablets",
     name: "Samsung Galaxy Tab S8",
     price: 799,
     image: "tablet-5.jpg",
@@ -500,7 +500,7 @@ const productsArray: Product[] = [
   },
   {
     id: "6f7csh9i-0123-45fa-cdeb-67890abcdef0",
-    category: "Tablets",
+    category: "tablets",
     name: "Samsung Galaxy Tab A8",
     price: 299,
     image: "tablet-6.jpg",
@@ -512,7 +512,7 @@ const productsArray: Product[] = [
   },
   {
     id: "3g8h9i0j-1234-56fb-deac-7890abcdef01",
-    category: "Tablets",
+    category: "tablets",
     name: "Microsoft Surface Pro 9",
     price: 999,
     image: "tablet-7.jpg",
@@ -524,7 +524,7 @@ const productsArray: Product[] = [
   },
   {
     id: "4h9i0j1k-2345-67gc-eabd-890abcdef012",
-    category: "Tablets",
+    category: "tablets",
     name: "Microsoft Surface Go 3",
     price: 499,
     image: "tablet-8.jpg",
@@ -535,7 +535,7 @@ const productsArray: Product[] = [
   },
   {
     id: "1i0j1k2l-3456-78hd-fabc-90abcdef0123",
-    category: "Tablets",
+    category: "tablets",
     name: "Microsoft Surface Pro X",
     price: 1299,
     image: "tablet-9.jpg",
@@ -546,7 +546,7 @@ const productsArray: Product[] = [
   },
   {
     id: "0j1k2l3m-4567-89ie-ntad-01abcdef0124",
-    category: "Tablets",
+    category: "tablets",
     name: "Apple iPad 10.2",
     price: 329,
     image: "tablet-10.jpg",
@@ -558,7 +558,7 @@ const productsArray: Product[] = [
   },
   {
     id: "5k2l3m4n-5678-90jf-hbce-12abcdef0125",
-    category: "Tablets",
+    category: "tablets",
     name: "Samsung Galaxy Tab S7",
     price: 649,
     image: "tablet-11.jpg",
