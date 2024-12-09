@@ -42,7 +42,7 @@ export const CategoryFilter = ({
                 value={category}
                 onChange={handleChangeCategory}
               />
-              <span>{category}</span>
+              <span className="capitalize">{category}</span>
               <span className="ml-auto text-neutral-400">
                 ({productsPerFilter("category", category)})
               </span>
