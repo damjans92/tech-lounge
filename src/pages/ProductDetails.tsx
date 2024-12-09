@@ -12,6 +12,7 @@ const ProductDetails = () => {
   const params = useParams();
   const productId = params.productId;
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImageSrc, setSelectedImageSrc] = useState<string | undefined>(
     ""
   );
@@ -76,7 +77,8 @@ const ProductDetails = () => {
               src={selectedImageSrc}
               alt={product?.name}
               effect="blur"
-              className="rounded-xl border border-neutral-300"
+              className="rounded-xl border border-neutral-300 cursor-pointer"
+              onClick={() => setLightboxOpen(true)}
             />
           </div>
         </div>
@@ -122,6 +124,29 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <div
+            className="relative w-[800px] h-[600px] bg-white rounded-lg shadow-xl p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImageSrc}
+              alt={product?.name}
+              className="w-full h-full object-cover"
+            />
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="absolute top-0 right-0 p-4 text-3xl text-white font-bold hover:text-red-500"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

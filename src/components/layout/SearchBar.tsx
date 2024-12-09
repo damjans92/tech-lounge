@@ -71,7 +71,7 @@ const SearchBar = ({ openSearch, toggleSearchBar }: SearchBarProps) => {
       {loading && <p className="text-center mt-2">Loading...</p>}{" "}
       {error && <p className="text-center mt-2 text-red-500">{error}</p>}
       {filteredProducts.length > 0 && (
-        <div className="absolute top-[70px] max-h-[300px] bg-white border border-neutral-300 p-3 max-w-[600px] overflow-y-scroll">
+        <div className="absolute top-[70px] max-h-[300px] bg-white border border-neutral-300 p-3 max-w-[600px] shadow-md overflow-y-scroll">
           {filteredProducts.map((product) => (
             <Link
               to={`/product/${product.id}`}

@@ -11,7 +11,6 @@ import { MdClose } from "react-icons/md";
 function Navbar() {
   const { state: cartState, dispatch: cartDispatch } = useCart();
   const [openSearch, setOpenSearch] = useState(false);
-  // const { screenWidth } = useScreenWidth();
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const toggleSearchBar = () => {
@@ -77,34 +76,42 @@ function Navbar() {
       </div>
       <SearchBar openSearch={openSearch} toggleSearchBar={toggleSearchBar} />
 
-      {isMobileNavOpen && (
-        <div className="top-0 left-0 fixed z-30 bg-black/50 w-full h-full">
-          <ul className="relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-light">
-            <li className="underline">
-              <Link
-                to="/"
-                className="hover:text-blue-500 transition duration-200"
-              >
-                Shop
-              </Link>
-            </li>
-            <li className="underline">
-              <Link
-                to="/about"
-                className="hover:text-blue-500 transition duration-200"
-              >
-                About
-              </Link>
-            </li>
-            <button
-              onClick={() => setIsMobileNavOpen(false)}
-              className="absolute top-3 right-5"
+      <div
+        className={`${
+          isMobileNavOpen ? "block" : "hidden"
+        } top-0 left-0 fixed z-30 bg-black/50 w-full h-full`}
+        onClick={() => setIsMobileNavOpen(false)}
+      >
+        <ul
+          onClick={(e) => e.stopPropagation()}
+          className={`${
+            isMobileNavOpen ? "animate-slideIn" : "animate-slideOut"
+          } relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-light`}
+        >
+          <li className="underline">
+            <Link
+              to="/"
+              className="hover:text-blue-500 transition duration-200"
             >
-              <MdClose size={30} />
-            </button>
-          </ul>
-        </div>
-      )}
+              Shop
+            </Link>
+          </li>
+          <li className="underline">
+            <Link
+              to="/about"
+              className="hover:text-blue-500 transition duration-200"
+            >
+              About
+            </Link>
+          </li>
+          <button
+            onClick={() => setIsMobileNavOpen(false)}
+            className="absolute top-3 right-5"
+          >
+            <MdClose size={30} />
+          </button>
+        </ul>
+      </div>
     </nav>
   );
 }
