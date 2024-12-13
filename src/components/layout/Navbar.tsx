@@ -111,11 +111,19 @@ function Navbar() {
           onClick={(e) => e.stopPropagation()}
           className={`${
             isMobileNavOpen ? "animate-slideIn" : "animate-slideOut"
-          } relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-light`}
+          } relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-semibold`}
         >
           <li className="underline">
             <NavLink
               to="/"
+              className="hover:text-blue-500 transition duration-200"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="underline">
+            <NavLink
+              to="/shop"
               className="hover:text-blue-500 transition duration-200"
             >
               Shop
