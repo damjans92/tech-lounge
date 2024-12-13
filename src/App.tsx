@@ -15,13 +15,15 @@ import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/cartContext";
 import { ProductProvider } from "./context/productsContext";
 import Category from "./pages/Category";
+import Home from "./pages/Home";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<AnimatedElement element={<Shop />} />} />
+        <Route path="/" element={<AnimatedElement element={<Home />} />} />
+        <Route path="/shop" element={<AnimatedElement element={<Shop />} />} />
         <Route
           path="/about"
           element={<AnimatedElement element={<About />} />}
