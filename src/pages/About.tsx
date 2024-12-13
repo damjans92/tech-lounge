@@ -8,7 +8,7 @@ function About() {
       </div>
       <div className="pt-16">
         <div className="container mx-auto px-4">
-          <main className="flex flex-col md:flex-row gap-6">
+          <main className="  gap-6">
             <section className="flex flex-col lg:flex-row gap-6 py-20">
               <div className="lg:w-1/2">
                 <LazyLoadImage
@@ -16,6 +16,8 @@ function About() {
                   height="auto"
                   width="100%"
                   alt="About Us"
+                  effect="blur"
+                  className="rounded-lg"
                 />
               </div>
               <div className="lg:w-1/2 text-xl sm:text-2xl font-light">

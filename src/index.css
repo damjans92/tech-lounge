@@ -111,3 +111,12 @@ p {
     padding: 0.65rem;
   }
 }
+
+.slider-container .slick-dots {
+  bottom: 12px;
+}
+.slider-container {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  overflow: hidden;
+}

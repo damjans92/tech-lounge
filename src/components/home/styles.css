@@ -1,0 +1,30 @@
+/* Change color of navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff5722; /* Change this to your desired color */
+}
+
+/* Optional: Change background color or add other styles */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  /* background: rgba(
+    255,
+    87,
+    34,
+    0.1
+  );   */
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 6px;
+  background: rgb(66, 79, 255);
+  border-radius: 3px;
+  transition: all 800ms ease-in-out;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 50px;
+}

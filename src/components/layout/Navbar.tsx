@@ -1,9 +1,9 @@
 import { BsCart } from "react-icons/bs";
 import { Cart } from "../shop/Cart";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import { RiMenu2Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
@@ -12,6 +12,7 @@ function Navbar() {
   const { state: cartState, dispatch: cartDispatch } = useCart();
   const [openSearch, setOpenSearch] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const location = useLocation();
 
   const toggleSearchBar = () => {
     setOpenSearch(!openSearch);
@@ -28,6 +29,10 @@ function Navbar() {
     );
   };
 
+  useEffect(() => {
+    setIsMobileNavOpen(false);
+  }, [location]);
+
   return (
     <nav className="bg-white p-4 ">
       <div className="container mx-auto flex justify-between items-center">
@@ -37,15 +42,27 @@ function Navbar() {
         >
           <RiMenu2Fill size={30} className="mr-2" />
         </button>
-        <Link to="/" className="uppercase text-lg sm:text-3xl">
+        <Link to="/" className="uppercase text-lg sm:text-3xl mr-auto">
           <span className="font-bold">Tech</span>
           <span className="tracking-widest font-thin">Lounge</span>
         </Link>
         <div className="hidden md:flex w-full justify-center">
-          <ul className="flex gap-3 uppercase text-xl font-light">
+          <ul className="flex gap-5 uppercase text-lg font-semibold">
             <li>
               <NavLink
                 to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-500"
+                    : "text-black hover:text-blue-500 transition-all"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/shop"
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-500"
