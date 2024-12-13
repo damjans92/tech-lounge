@@ -6,7 +6,6 @@ interface CategoryCardProps {
   title: string;
   image: string;
   bgColor: string;
-  shadowColor: string;
   textColor: string;
   description: string;
   index: number;
@@ -16,7 +15,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   title,
   image,
   bgColor,
-  shadowColor,
   textColor,
   description,
   index,
