@@ -24,11 +24,11 @@ To get started with TechLounge, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/techlounge.git
+   git clone https://github.com/damjans92/tech-lounge
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd techlounge
+   cd tech-lounge
    ```
 3. **Install dependencies**:
    ```bash

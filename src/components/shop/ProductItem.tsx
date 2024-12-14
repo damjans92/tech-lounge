@@ -30,7 +30,6 @@ function ProductItem({ product }: ProductItemProps) {
             src={`/images/thumbs/${getThumbnailImage(product.image)}`}
             alt={product.name}
             className="transform transition-transform duration-300  group-hover:scale-105"
-            loading="lazy"
           />
         </div>
         <div className="flex items-center flex-col p-2">

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import { RiMenu2Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
+import NavLinks from "./NavLinks";
 
 function Navbar() {
   const { state: cartState, dispatch: cartDispatch } = useCart();
@@ -48,42 +49,7 @@ function Navbar() {
         </Link>
         <div className="hidden md:flex w-full justify-center">
           <ul className="flex gap-5 uppercase text-lg font-semibold">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-blue-500"
-                    : "text-black hover:text-blue-500 transition-all"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/shop"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-blue-500"
-                    : "text-black hover:text-blue-500 transition-all"
-                }
-              >
-                Shop
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-blue-500"
-                    : "text-black hover:text-blue-500 transition-all"
-                }
-              >
-                About
-              </NavLink>
-            </li>
+            <NavLinks />
           </ul>
         </div>
         <div className="relative w-[150px] flex justify-end gap-3">
@@ -113,30 +79,7 @@ function Navbar() {
             isMobileNavOpen ? "animate-slideIn" : "animate-slideOut"
           } relative bg-white md:hidden flex flex-col pl-6 h-full max-w-[300px] pt-12 gap-3 uppercase text-xl font-semibold`}
         >
-          <li className="underline">
-            <NavLink
-              to="/"
-              className="hover:text-blue-500 transition duration-200"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="underline">
-            <NavLink
-              to="/shop"
-              className="hover:text-blue-500 transition duration-200"
-            >
-              Shop
-            </NavLink>
-          </li>
-          <li className="underline">
-            <NavLink
-              to="/about"
-              className="hover:text-blue-500 transition duration-200"
-            >
-              About
-            </NavLink>
-          </li>
+          <NavLinks />
           <button
             onClick={() => setIsMobileNavOpen(false)}
             className="absolute top-3 right-5"

@@ -3,8 +3,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function About() {
   return (
     <>
-      <div className="flex justify-center bg-neutral-100 py-12">
-        <div className="uppercase text-6xl font-thin">About</div>
+      <div className="flex justify-center bg-neutral-100 py-6 sm:py-12">
+        <div className="uppercase text-3xl sm:text-6xl font-thin">About</div>
       </div>
       <div className="pt-16">
         <div className="container mx-auto px-4">

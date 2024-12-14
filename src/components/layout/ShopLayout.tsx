@@ -79,8 +79,10 @@ function ShopLayout({
   }, [selectedBrands, selectedCategories, sortOption]);
   return (
     <>
-      <div className="flex justify-center bg-neutral-100 py-12">
-        <div className="uppercase text-6xl font-thin">{pageTitle}</div>
+      <div className="flex justify-center bg-neutral-100 py-6 sm:py-12">
+        <div className="uppercase text-3xl sm:text-6xl font-thin">
+          {pageTitle}
+        </div>
       </div>
       <div className="sm:pt-16">
         <div className="container mx-auto px-4 py-20">
