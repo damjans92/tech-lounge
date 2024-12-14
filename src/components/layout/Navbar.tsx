@@ -1,6 +1,6 @@
 import { BsCart } from "react-icons/bs";
 import { Cart } from "../shop/Cart";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
