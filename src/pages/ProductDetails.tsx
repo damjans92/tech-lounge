@@ -43,7 +43,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className="container mx-auto py-28 px-4">
+    <section className="container mx-auto pt-20 pb-28 px-4">
       <div className="flex flex-col md:flex-row gap-12 ">
         <div className="flex flex-col md:flex-col lg:flex-row w-full md:w-1/2 gap-3">
           <div className=" lg:w-1/6 flex flex-row md:flex-row lg:flex-col gap-3 lg:order-1 order-2">

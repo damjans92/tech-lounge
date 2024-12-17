@@ -32,6 +32,7 @@ function Navbar() {
 
   useEffect(() => {
     setIsMobileNavOpen(false);
+    setOpenSearch(false);
   }, [location]);
 
   return (
