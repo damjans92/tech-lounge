@@ -17,8 +17,21 @@ const SearchBar = ({ openSearch, toggleSearchBar }: SearchBarProps) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const debounce = (func: (...args: any[]) => void, delay: number) => {
+    let timeoutId: number | null = null;
+
+    return (...args: any[]) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        func(...args);
+      }, delay);
+    };
+  };
+
   useEffect(() => {
-    const filterProducts = () => {
+    const filterProducts = debounce(() => {
       if (searchTerm.length === 0) return;
 
       setLoading(true);
@@ -37,7 +50,7 @@ const SearchBar = ({ openSearch, toggleSearchBar }: SearchBarProps) => {
         }
         setLoading(false);
       }
-    };
+    }, 1000);
     filterProducts();
   }, [searchTerm, products]);
 
